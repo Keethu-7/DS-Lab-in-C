@@ -32,6 +32,14 @@ void main()
 		}
 	}
 	
+	printf("Display the elements of linked list\n");
+	ptr=head;
+	while(ptr!=NULL)
+	{
+		printf("%d->",ptr->data);
+		ptr=ptr->next;
+	}
+	
 	ptr=head;
 	min=ptr->data;
 	while(ptr!=NULL)
@@ -40,6 +48,7 @@ void main()
 		{
 			min=ptr->data;
 		}
+		ptr=ptr->next;
 	}
 	ptr=head;
 	while(ptr!=NULL)
@@ -66,7 +75,7 @@ void main()
 		}
 	}
 	
-	printf("Display the elements of linked list\n");
+	printf("\nDisplay the elements of linked list\n");
 	ptr=head;
 	while(ptr!=NULL)
 	{
