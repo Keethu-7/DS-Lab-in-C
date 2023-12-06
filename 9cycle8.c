@@ -73,6 +73,11 @@ void main()
 				break;
 				
 			}
+			else if(ptr->next==NULL)
+			{
+				ptr->prev->next = NULL;
+				free(ptr);
+			}
 			else
 			{
 				ptr->prev->next = ptr->next;
@@ -88,11 +93,7 @@ void main()
 		}
 	}
 	
-	if(ptr->next==NULL)
-	{
-		ptr->prev->next = NULL;
-		free(ptr);
-	}
+	
 	
 	printf("Display the elements of linked list after deleting\n");
 	ptr=head;
